@@ -2,7 +2,7 @@
 //fetching name
 if(isset($_SESSION['user'])){
     $email = $_SESSION['user'];
-    $sql = "SELECT * FROM staffs WHERE email = '$email'";
+    $sql = "SELECT * FROM admin WHERE email = '$email'";
     $result = $conn->query($sql);
     while ($row = mysqli_fetch_assoc($result)) {
       $name =$row['name'];
@@ -49,56 +49,12 @@ if(isset($_SESSION['user'])){
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/allcustomers.php" || $_SERVER['REQUEST_URI'] == "/addcustomer.php"){echo 'active';}?>">
-            <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
-              <i class="fa fa-id-badge"></i>
-              <p> Customers
-                <b class="caret"></b>
-              </p>
+          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/drivers.php"){echo 'active';}?>">
+            <a class="nav-link" href="drivers.php">
+              <i class="material-icons">Drivers</i>
+              <p>Drivers</p>
             </a>
-            <div class="collapse" id="componentsExamples">
-              <ul class="nav">
-                <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/allcustomers.php"){echo 'active';}?>">
-                  <a class="nav-link" href="allcustomers.php">
-                    <span class="sidebar-mini"> AC </span>
-                    <span class="sidebar-normal"> All Customers </span>
-                  </a>
-                </li>
-                <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/addcustomer.php"){echo 'active';}?>">
-                  <a class="nav-link" href="addcustomer.php">
-                    <span class="sidebar-mini"> AC </span>
-                    <span class="sidebar-normal"> Add Customer </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
           </li>
-          <?php if($_SESSION['role'] == "admin"){?>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/allstaffs.php" || $_SERVER['REQUEST_URI'] == "/addstaff.php"){echo 'active';}?>">
-            <a class="nav-link" data-toggle="collapse" href="#componentsExample">
-              <i class="fa fa-users"></i>
-              <p> Staffs
-                <b class="caret"></b>
-              </p>
-            </a>
-            <div class="collapse" id="componentsExample">
-              <ul class="nav">
-                <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/allstaffs.php"){echo 'active';}?>">
-                  <a class="nav-link" href="allstaffs.php">
-                    <span class="sidebar-mini"> AS </span>
-                    <span class="sidebar-normal"> All Staffs </span>
-                  </a>
-                </li>
-                <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/addstaff.php"){echo 'active';}?>">
-                  <a class="nav-link" href="addstaff.php">
-                    <span class="sidebar-mini"> AS </span>
-                    <span class="sidebar-normal"> Add Staff </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <?php }?>
           <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/deposit.php"){echo 'active';}?>">
             <a class="nav-link" href="deposit.php">
               <i class="fa fa-plus"></i>

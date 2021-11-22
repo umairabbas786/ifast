@@ -13,22 +13,22 @@ include "include/conn.php";
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <?php 
-  $title="Rooi Boos";
-  if($_SERVER['REQUEST_URI'] == "/login.php"){$title="Login - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/index.php"){$title="Dashboard - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/profile.php"){$title="My Profile - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/allcustomers.php"){$title="Customers - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/addcustomer.php"){$title="Add Customer - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/allstaffs.php"){$title="Staffs - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/addstaff.php"){$title="Staffs - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/currencies.php"){$title="Currencies - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/charges_settings.php"){$title="Currency Charges Settings - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/countries.php"){$title="Countries - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/banks.php"){$title="Banks - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/edit_customers.php"){$title="Edit Customer - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/settlement_requests.php"){$title="Settlement Requests - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/deposit.php"){$title="Deposit History - Rooi Boos";}
-  else if($_SERVER['REQUEST_URI'] == "/transfer_payments.php"){$title="Transfer Payments - Rooi Boos";}
+  $title="iFast";
+  if($_SERVER['REQUEST_URI'] == "/login.php"){$title="Login - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/index.php"){$title="Dashboard - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/profile.php"){$title="My Profile - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/allcustomers.php"){$title="Customers - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/addcustomer.php"){$title="Add Customer - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/allstaffs.php"){$title="Staffs - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/addstaff.php"){$title="Staffs - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/currencies.php"){$title="Currencies - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/charges_settings.php"){$title="Currency Charges Settings - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/countries.php"){$title="Countries - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/banks.php"){$title="Banks - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/edit_customers.php"){$title="Edit Customer - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/settlement_requests.php"){$title="Settlement Requests - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/deposit.php"){$title="Deposit History - iFast";}
+  else if($_SERVER['REQUEST_URI'] == "/transfer_payments.php"){$title="Transfer Payments - iFast";}
   ?>
   <title><?php echo $title;?></title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />

@@ -21,19 +21,19 @@ if (empty(isset($_SESSION['user']))) {
                                 <i class="material-icons">person</i>
                             </div>
                             <?php 
-                            $sql="select count(id) from customers where status=1";
-                            $result=$conn->query($sql);
-                            $row=mysqli_fetch_assoc($result);
-                            $block=$row['count(id)'];
+                            // $sql="select count(id) from customers where status=1";
+                            // $result=$conn->query($sql);
+                            // $row=mysqli_fetch_assoc($result);
+                            // $block=$row['count(id)'];
                             ?>
                             <?php 
-                            $sql="select count(id) from customers where status=0";
-                            $result=$conn->query($sql);
-                            $row=mysqli_fetch_assoc($result);
-                            $unblock=$row['count(id)'];
+                            // $sql="select count(id) from customers where status=0";
+                            // $result=$conn->query($sql);
+                            // $row=mysqli_fetch_assoc($result);
+                            // $unblock=$row['count(id)'];
                             ?>
                             <p class="card-category">Active / Block</p>
-                            <h3 class="card-title"><?php echo $unblock;?> / <?php echo $block;?>
+                            <h3 class="card-title"><?php //echo $unblock;?> / <?php //echo $block;?>
                             </h3>
                         </div>
                         <div class="card-footer">
@@ -67,13 +67,13 @@ if (empty(isset($_SESSION['user']))) {
                                 <i class="material-icons">info_outline</i>
                             </div>
                             <?php 
-                            $sql="select count(id) from withdraw_history where status=0";
-                            $result=$conn->query($sql);
-                            $row=mysqli_fetch_assoc($result);
-                            $pending=$row['count(id)'];
+                            // $sql="select count(id) from withdraw_history where status=0";
+                            // $result=$conn->query($sql);
+                            // $row=mysqli_fetch_assoc($result);
+                            // $pending=$row['count(id)'];
                             ?>
                             <p class="card-category">Pending Payments</p>
-                            <h3 class="card-title"><?php echo $pending;?></h3>
+                            <h3 class="card-title"><?php //echo $pending;?></h3>
                         </div>
                         <div class="card-footer">
                             <div class="stats">
@@ -89,13 +89,13 @@ if (empty(isset($_SESSION['user']))) {
                                 <i class="fa fa-exchange"></i>
                             </div>
                             <?php 
-                            $sql="select count(id) from send_history";
-                            $result=$conn->query($sql);
-                            $row=mysqli_fetch_assoc($result);
-                            $transfer=$row['count(id)'];
+                            // $sql="select count(id) from send_history";
+                            // $result=$conn->query($sql);
+                            // $row=mysqli_fetch_assoc($result);
+                            // $transfer=$row['count(id)'];
                             ?>
                             <p class="card-category">Transfer Payments</p>
-                            <h3 class="card-title"><?php echo $transfer;?></h3>
+                            <h3 class="card-title"><?php //echo $transfer;?></h3>
                         </div>
                         <div class="card-footer">
                             <div class="stats">

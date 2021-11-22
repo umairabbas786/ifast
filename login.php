@@ -6,27 +6,18 @@ if (isset($_SESSION['user'])) {
 }
 if(isset($_POST['login']))
 {
-	$status="";
     $email=$_POST['email'];
     $password=$_POST['password'];
-    $sql="select * from staffs where email='$email' && password='$password'";
+    $sql="select * from admin where email='$email' && password='$password'";
     $result=mysqli_query($conn,$sql);
 	if($row=mysqli_fetch_assoc($result)){
 		$id=$row['id'];
-		$status=$row['status'];
-		$role=$row['role'];
-	}
-	if($status==1){
-		$_SESSION['message']="Your Account is Temporarily Blocked by Admin, Contact Admin for More details.";
-		header("Location:login.php");
-		die();
 	}
     $count = mysqli_num_rows($result);
     if($count>=1)
     {
 		$_SESSION['userid']=$id;
         $_SESSION['user'] = $email;
-		$_SESSION['role']=$role;
         header("Location:index.php");
         die();
     }
