@@ -67,7 +67,7 @@ if(isset($_GET['remove_driver'])){
                       <div class="card-icon">
                         <i class="fa fa-id-badge" style="font-size:24px;"></i>
                       </div>
-                      <h4 class="card-title">Customers</h4>
+                      <h4 class="card-title">Drivers</h4>
                     </div>
                         <!-- DataTales Example -->
     
