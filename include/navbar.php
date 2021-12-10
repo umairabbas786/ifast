@@ -56,47 +56,59 @@ if(isset($_SESSION['user'])){
             </a>
           </li>
           <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/deposit.php"){echo 'active';}?>">
-            <a class="nav-link" href="deposit.php">
+            <a class="nav-link" href="deliveries.php">
               <i class="fa fa-plus"></i>
-              <p>Deposit</p>
+              <p>Deliveries</p>
             </a>
           </li>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/transfer_payments.php"){echo 'active';}?>">
+          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/deposit.php"){echo 'active';}?>">
+            <a class="nav-link" href="deposit.php">
+              <i class="fa fa-plus"></i>
+              <p>Customers</p>
+            </a>
+          </li>
+          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/deposit.php"){echo 'active';}?>">
+            <a class="nav-link" href="deposit.php">
+              <i class="fa fa-plus"></i>
+              <p>Driver Partners</p>
+            </a>
+          </li>
+          <!-- <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/transfer_payments.php"){echo 'active';}?>">
             <a class="nav-link" href="transfer_payments.php">
               <i class="fa fa-exchange"></i>
               <p>Transfer Payments</p>
             </a>
-          </li>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/settlement_requests.php"){echo 'active';}?>">
+          </li> -->
+          <!-- <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/settlement_requests.php"){echo 'active';}?>">
             <a class="nav-link" href="settlement_requests.php">
               <i class="fa fa-handshake-o"></i>
               <p>Settlement Requests</p>
             </a>
-          </li>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/charges_settings.php"){echo 'active';}?>">
+          </li> -->
+          <!-- <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/charges_settings.php"){echo 'active';}?>">
             <a class="nav-link" href="charges_settings.php">
               <i class="fa fa-sliders"></i>
               <p>Charges Settings</p>
             </a>
-          </li>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/currencies.php"){echo 'active';}?>">
+          </li> -->
+          <!-- <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/currencies.php"){echo 'active';}?>">
             <a class="nav-link" href="currencies.php">
               <i class="fa fa-money"></i>
               <p>Supported Currency</p>
             </a>
-          </li>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/countries.php"){echo 'active';}?>">
+          </li> -->
+          <!-- <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/countries.php"){echo 'active';}?>">
             <a class="nav-link" href="countries.php">
               <i class="fa fa-globe"></i>
               <p>Supported Countries</p>
             </a>
-          </li>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/banks.php"){echo 'active';}?>">
+          </li> -->
+          <!-- <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/banks.php"){echo 'active';}?>">
             <a class="nav-link" href="banks.php">
               <i class="fa fa-university"></i>
               <p>Supported Banks</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="fa fa-cogs"></i>
