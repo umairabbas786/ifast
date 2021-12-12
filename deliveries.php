@@ -161,7 +161,7 @@ if(isset($_POST['add_c_fee'])){
                   </thead>
                   <tbody>
                     <?php
-                          $sql="select * from delivery where pending = 1";	
+                          $sql="select * from delivery where pending = 3";	
                           $result=$conn->query($sql);
                           while($row=mysqli_fetch_assoc($result)){
                             $id=$row['id'];
@@ -325,7 +325,7 @@ if(isset($_POST['add_c_fee'])){
                   </thead>
                   <tbody>
                     <?php
-                          $sql="select * from delivery";	
+                          $sql="select * from delivery where pending = 2";	
                           $result=$conn->query($sql);
                           while($row=mysqli_fetch_assoc($result)){
                             $id=$row['id'];
