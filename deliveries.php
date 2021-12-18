@@ -348,7 +348,7 @@ if(isset($_POST['add_c_fee'])){
                             $created_at=$row['created_at'];
 
                             $sql2="select * from drivers where id= '$driver_id'";
-                            $result2=$conn->query($sql2);
+                            $result5=$conn->query($sql2);
                             $row2=mysqli_fetch_assoc($result2);
                             $driver=$row2['full_name'];
                         ?>

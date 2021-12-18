@@ -4,12 +4,11 @@
 //fetching user data
 if(isset($_SESSION['user'])){
     $email = $_SESSION['user'];
-    $sql = "SELECT * FROM staffs WHERE email = '$email'";
+    $sql = "SELECT * FROM admin WHERE email = '$email'";
     $result = $conn->query($sql);
     while ($row = mysqli_fetch_assoc($result)) {
       $name =$row['name'];
       $pass=$row['password'];
-      $phone=$row['phone_number'];
     }
  }
  //getting user id
@@ -21,13 +20,13 @@ if(isset($_POST['change_password'])){
     $oldpass=$_POST['old_password'];
     $newpass=$_POST['password'];
     $confirmpass=$_POST['password_confirmation'];
-    $sql="SELECT * FROM staffs WHERE id = '$id'";
+    $sql="SELECT * FROM admin WHERE id = '$id'";
     $result=$conn->query($sql);
     $row=mysqli_fetch_assoc($result);
     $existingpass=$row['password'];
     if($oldpass==$existingpass){
         if($newpass==$confirmpass){
-            $q="update staffs set password='$newpass' where id='$id'";
+            $q="update admin set password='$newpass' where id='$id'";
             $updatepass=$conn->query($q);
             if($updatepass){
                 $_SESSION['passsuccess']="Password Updated Successfully.";
@@ -80,15 +79,6 @@ if(isset($_POST['change_password'])){
                                         <div class="form-group bmd-form-group is-filled">
                                             <input class="form-control" name="email" id="input-email" type="email"
                                                 placeholder="Email" readonly value="<?php echo $email;?>" required="true">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <label class="col-sm-2 col-form-label">Phone Number</label>
-                                    <div class="col-sm-7">
-                                        <div class="form-group bmd-form-group is-filled">
-                                            <input class="form-control" name="phone" id="input-email" type="number"
-                                                   placeholder="Phone Number" readonly value="<?php echo $phone;?>" required="true">
                                         </div>
                                     </div>
                                 </div>

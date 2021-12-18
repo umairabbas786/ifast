@@ -12,7 +12,7 @@ if(isset($_SESSION['user'])){
 <div class="wrapper ">
     <div class="sidebar" data-color="azure" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
       <div class="logo"><a href="#" class="simple-text logo-normal">
-      <?php echo $name;?>
+      Link It
         </a></div>
       <div class="sidebar-wrapper">
           <ul class="nav">
@@ -51,40 +51,40 @@ if(isset($_SESSION['user'])){
           </li>
           <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/drivers.php"){echo 'active';}?>">
             <a class="nav-link" href="drivers.php">
-              <i class="material-icons">Drivers</i>
+            <i class="fa fa-user-secret"></i>
               <p>Drivers</p>
             </a>
           </li>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/deposit.php"){echo 'active';}?>">
-            <a class="nav-link" href="deliveries.php">
-              <i class="fa fa-plus"></i>
-              <p>Deliveries</p>
-            </a>
-          </li>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/deposit.php"){echo 'active';}?>">
-            <a class="nav-link" href="deposit.php">
-              <i class="fa fa-plus"></i>
+          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/customers.php"){echo 'active';}?>">
+            <a class="nav-link" href="customers.php">
+              <i class="fa fa-user"></i>
               <p>Customers</p>
             </a>
           </li>
-          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/deposit.php"){echo 'active';}?>">
-            <a class="nav-link" href="deposit.php">
-              <i class="fa fa-plus"></i>
+          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/deliveries.php"){echo 'active';}?>">
+            <a class="nav-link" href="deliveries.php">
+              <i class="fa fa-truck"></i>
+              <p>Deliveries</p>
+            </a>
+          </li>
+          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/partners.php"){echo 'active';}?>">
+            <a class="nav-link" href="partners.php">
+              <i class="fa fa-users"></i>
               <p>Driver Partners</p>
             </a>
           </li>
-          <!-- <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/transfer_payments.php"){echo 'active';}?>">
-            <a class="nav-link" href="transfer_payments.php">
+          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/withdrawl.php"){echo 'active';}?>">
+            <a class="nav-link" href="withdrawl.php">
               <i class="fa fa-exchange"></i>
-              <p>Transfer Payments</p>
+              <p>Withdrawl Requests</p>
             </a>
-          </li> -->
-          <!-- <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/settlement_requests.php"){echo 'active';}?>">
-            <a class="nav-link" href="settlement_requests.php">
+          </li>
+          <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/deposit.php"){echo 'active';}?>">
+            <a class="nav-link" href="deposit.php">
               <i class="fa fa-handshake-o"></i>
-              <p>Settlement Requests</p>
+              <p>Deposit Requests</p>
             </a>
-          </li> -->
+          </li>
           <!-- <li class="nav-item <?php if($_SERVER['REQUEST_URI'] == "/charges_settings.php"){echo 'active';}?>">
             <a class="nav-link" href="charges_settings.php">
               <i class="fa fa-sliders"></i>
