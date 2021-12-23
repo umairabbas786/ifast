@@ -187,11 +187,15 @@ if(isset($_POST['add_c_fee'])){
                             $result2=$conn->query($sql2);
                             $row2=mysqli_fetch_assoc($result2);
                             $driver=$row2['full_name'];
+                            $sql3="select * from customers where id= '$customer_id'";
+                            $result6=$conn->query($sql3);
+                            $row3=mysqli_fetch_assoc($result6);
+                            $customer=$row3['first_name'].' '.$row3['last_name'];
                         ?>
                     <tr>
                       <td><?php echo $id;?></td>
                       <td><?php echo $driver;?></td>
-                      <td><?php echo $customer_id;?></td>
+                      <td><?php echo $customer;?></td>
                       <td><?php echo $items;?></td>
                       <td><?php echo $description;?></td>
                       <td><?php echo $pickup_location;?></td>
@@ -270,11 +274,15 @@ if(isset($_POST['add_c_fee'])){
                             $result2=$conn->query($sql2);
                             $row2=mysqli_fetch_assoc($result2);
                             $driver=$row2['full_name'];
+                            $sql3="select * from customers where id= '$customer_id'";
+                            $result6=$conn->query($sql3);
+                            $row3=mysqli_fetch_assoc($result6);
+                            $customer=$row3['first_name'].' '.$row3['last_name'];
                         ?>
                     <tr>
                       <td><?php echo $id;?></td>
                       <td><?php echo $driver;?></td>
-                      <td><?php echo $customer_id;?></td>
+                      <td><?php echo $customer;?></td>
                       <td><?php echo $items;?></td>
                       <td><?php echo $description;?></td>
                       <td><?php echo $pickup_location;?></td>
@@ -330,10 +338,6 @@ if(isset($_POST['add_c_fee'])){
                           while($row=mysqli_fetch_assoc($result)){
                             $id=$row['id'];
                             $customer_id=$row['customer_id'];
-                            // $sql1="select name from currency where id= '$from_id'";
-                            // $result1=$conn->query($sql1);
-                            // $row1=mysqli_fetch_assoc($result1);
-                            $customer="";
                             $driver_id=$row['driver_id'];
                             $items=$row['item_names'];
                             $description=$row['description'];
@@ -351,11 +355,15 @@ if(isset($_POST['add_c_fee'])){
                             $result5=$conn->query($sql2);
                             $row2=mysqli_fetch_assoc($result2);
                             $driver=$row2['full_name'];
+                            $sql3="select * from customers where id= '$customer_id'";
+                            $result6=$conn->query($sql3);
+                            $row3=mysqli_fetch_assoc($result6);
+                            $customer=$row3['first_name'].' '.$row3['last_name'];
                         ?>
                     <tr>
                       <td><?php echo $id;?></td>
                       <td><?php echo $driver;?></td>
-                      <td><?php echo $customer_id;?></td>
+                      <td><?php echo $customer;?></td>
                       <td><?php echo $items;?></td>
                       <td><?php echo $description;?></td>
                       <td><?php echo $pickup_location;?></td>

@@ -22,6 +22,11 @@ if(isset($_GET['completestatus'])){
     $sql2 = "update driver_wallet set balance = '$updated_bal' where driver_id = '$driver_id'";
     $result2 = $conn->query($sql2);
     if($result2){
+        $dt = date('Y-m-d h:i:s'); 
+        $uniqueid=uniqid();
+        $msg = "$".$bal." "."has been successfully Transferred to your Paypal Account";
+        $sql5 = "insert into driver_notifications (uid,driver_id,msg,state,created_at,updated_at) values('$uniqueid','$driver_id','$msg',0,'$dt','$dt')";
+        $result5 = $conn->query($sql5);
         $sql="update driver_withdraws set status = 1 where id = '$sid'";
         $result=$conn->query($sql);
         if($result){
@@ -56,6 +61,11 @@ if(isset($_GET['canclestatus'])){
     $sql2 = "update driver_wallet set balance = '$updated_bal' where driver_id = '$driver_id'";
     $result2 = $conn->query($sql2);
     if($result2){
+        $dt = date('Y-m-d h:i:s'); 
+        $uniqueid=uniqid();
+        $msg = "Your Request to withdraw the Amount $".$bal." "."have been cancelled.";
+        $sql5 = "insert into driver_notifications (uid,driver_id,msg,state,created_at,updated_at) values('$uniqueid','$driver_id','$msg',0,'$dt','$dt')";
+        $result5 = $conn->query($sql5);
         $sql="update driver_withdraws set status = 2 where id = '$sid'";
         $result=$conn->query($sql);
         if($result){
@@ -98,7 +108,7 @@ if(isset($_GET['canclestatus'])){
                       </div>
                       <h4 class="card-title">Withdrawl Requests</h4>
                     </div>
-                        <!-- DataTales Example -->
+    <!-- DataTales Example -->
     
         <div class="card-body">
             <div class="table-responsive text-center">
